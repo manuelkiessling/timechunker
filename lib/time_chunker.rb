@@ -14,7 +14,7 @@ class TimeChunker
         chunks << first_chunk + (i * 60 * chunk_size.size)
       end
       
-      chunks
+      return chunks
 
     end
   end
