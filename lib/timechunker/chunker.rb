@@ -24,11 +24,11 @@ module Timechunker
     def find_chunk(time, chunksize)
       if chunksize.type == 'minutes'
         first_chunk = Time.local(time.year,
-        time.month,
-        time.day,
-        time.hour,
-        time.min / chunksize.size * chunksize.size,
-        0)
+                                 time.month,
+                                 time.day,
+                                 time.hour,
+                                 time.min / chunksize.size * chunksize.size,
+                                 0)
       end
     end
 
