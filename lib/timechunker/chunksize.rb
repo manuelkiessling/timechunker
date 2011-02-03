@@ -1,4 +1,4 @@
-Module Timechunker
+module Timechunker
   class Chunksize
 
       attr_reader :size, :type
@@ -8,5 +8,5 @@ Module Timechunker
         @type = type
       end
 
-    end
+  end
 end

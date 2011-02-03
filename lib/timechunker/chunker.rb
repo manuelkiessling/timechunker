@@ -1,16 +1,16 @@
-Module Timechunker
+module Timechunker
   class Chunker
 
-    def get_chunks(time_range, chunk_size)
-      if chunk_size.type == 'minutes'
-        number_of_chunks = ((time_range.end_time - time_range.start_time) / 60 / chunk_size.size).round.to_i
+    def get_chunks(timerange, chunksize)
+      if chunksize.type == 'minutes'
+        number_of_chunks = ((timerange.end_time - timerange.start_time) / 60 / chunksize.size).round.to_i
         number_of_chunks = number_of_chunks + 1
 
-        first_chunk = find_chunk(time_range.start_time, chunk_size)
+        first_chunk = find_chunk(timerange.start_time, chunksize)
 
         chunks = []
         number_of_chunks.times do |i|
-          chunks << first_chunk + (i * 60 * chunk_size.size)
+          chunks << first_chunk + (i * 60 * chunksize.size)
         end
 
         return chunks
@@ -21,13 +21,13 @@ Module Timechunker
 
     private
 
-    def find_chunk(time, chunk_size)
-      if chunk_size.type == 'minutes'
+    def find_chunk(time, chunksize)
+      if chunksize.type == 'minutes'
         first_chunk = Time.local(time.year,
         time.month,
         time.day,
         time.hour,
-        time.min / chunk_size.size * chunk_size.size,
+        time.min / chunksize.size * chunksize.size,
         0)
       end
     end

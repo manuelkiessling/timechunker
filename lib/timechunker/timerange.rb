@@ -1,4 +1,4 @@
-Module Timechunker
+module Timechunker
   class Timerange
 
     attr_reader :start_time, :end_time
