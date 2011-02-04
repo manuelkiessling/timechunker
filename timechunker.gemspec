@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.summary     = "Simple class to chunk a time range into ranges of a defined size."
   s.author      = "Manuel Kiessling"
   s.email       = "manuel@kiessling.net"
-  s.homepage    = "https://github.com/ManuelKiessling/rbTimeChunker"
+  s.homepage    = "https://github.com/ManuelKiessling/Timechunker"
 
   s.rubyforge_project = "timechunker"
 

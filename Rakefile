@@ -21,5 +21,5 @@ end
 
 desc "Release new gem version"
 task :release => :build do
-  system "gem push timechunker-#{Timechunker::VERSION}"
+  system "gem push timechunker-#{Timechunker::VERSION}.gem"
 end
